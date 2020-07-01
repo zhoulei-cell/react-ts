@@ -5,21 +5,8 @@
     border-bottom: 1px solid #ccc;
   }
   .nav-bar-left{
-    position: absolute;
-    top: 0;
     left: 0;
-    width: px2rem(130);
-    height: px2rem(88);
     padding-left: px2rem(20);
-    i{
-      font-size: px2rem(32);
-      line-height: px2rem(32);
-    }
-    span{
-      padding-left: px2rem(10);
-      font-size: px2rem(28);
-      line-height: px2rem(28);
-    }
   }
   .nav-bar-center{
     height: px2rem(88);
@@ -29,12 +16,14 @@
     line-height: px2rem(88);
   }
   .nav-bar-right{
+    right: 0;
+    padding-right: px2rem(20);
+  }
+  .nav-bar-left,.nav-bar-right{
     position: absolute;
     top: 0;
-    right: 0;
     width: px2rem(130);
     height: px2rem(88);
-    padding-right: px2rem(20);
     i{
       font-size: px2rem(32);
       line-height: px2rem(32);
@@ -43,6 +32,10 @@
       padding-left: px2rem(10);
       font-size: px2rem(28);
       line-height: px2rem(28);
+    }
+    img{
+      width: px2rem(40);
+      height: px2rem(40);
     }
   }
 }

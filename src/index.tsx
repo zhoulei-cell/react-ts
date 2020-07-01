@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import routes from './routes'
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { HashRouter as Router, Switch, Route } from "react-router-dom"
+import routes from './routes'
+import './index.css'
 import "./assets/hotcss/hotcss"
 
 ReactDOM.render(

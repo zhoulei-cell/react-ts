@@ -3,6 +3,7 @@ import "./TabBarItem.scss"
 
 interface IProps{
   text: string;
+  icon: string;
   iconPath: string;
   selectedIconPath: string;
 }

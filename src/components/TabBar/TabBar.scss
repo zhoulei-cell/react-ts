@@ -1,5 +1,9 @@
 
 .tab-bar{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   height: px2rem(98);
   border-top: 1px solid #ccc;
 }

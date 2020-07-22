@@ -1,0 +1,20 @@
+
+.input-box{
+  padding: 0 px2rem(20);
+  border: px2rem(1) solid #ccc;
+  input.input{
+    height: px2rem(88);
+    padding: 0;
+    outline: none;
+    border: none;
+    font-size: px2rem(26);
+    line-height: px2rem(88);
+  }
+  span{
+    height: px2rem(88);
+    padding: 0 px2rem(20);
+    color: #999;
+    font-size: px2rem(24);
+    line-height: px2rem(88);
+  }
+}

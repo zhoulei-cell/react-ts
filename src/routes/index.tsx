@@ -1,6 +1,6 @@
-import React from "react"
-import App from "../App"
-import News from "../pages/News"
+import React from 'react'
+import App from '../App'
+import News from '../pages/News'
 
 interface IRoutes{
   path: string;

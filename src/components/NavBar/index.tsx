@@ -8,11 +8,11 @@ interface IProps {
   leftText?: string;
   leftImg?: string;
   leftIcon?: string;
-  leftClick?: () => void;
+  leftClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   rightText?: string;
   rightImg?: string;
   rightIcon?: string;
-  rightClick?: () => void;
+  rightClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
 const NavBar: React.FC<IProps> = (props) => {

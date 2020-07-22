@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch } from "react-router-dom"
+import { Route, Switch } from 'react-router-dom'
 import NavBar from './components/NavBar'
 //import { useHistory, useLocation, useParams, useRouteMatch } from "react-router-dom"
 //import "./assets/iconfont/iconfont.css"

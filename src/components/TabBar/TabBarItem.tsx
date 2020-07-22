@@ -1,6 +1,6 @@
-import React from "react"
-import { Route, Link } from "react-router-dom"
-import "./TabBarItem.scss"
+import React from 'react'
+import { Route, Link } from 'react-router-dom'
+import './TabBarItem.scss'
 
 export interface IProps{
   text?: string;

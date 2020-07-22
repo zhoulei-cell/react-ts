@@ -5,10 +5,10 @@ import NavBar from './components/NavBar'
 //import { useHistory, useLocation, useParams, useRouteMatch } from "react-router-dom"
 //import "./assets/iconfont/iconfont.css"
 import { TabBar, TabBarItem } from './components/TabBar'
-import home from './components/TabBar/home/home.png'
-import selectedHome from './components/TabBar/home/selectedHome.png'
-import mine from './components/TabBar/home/mine.png'
-import selectedMine from './components/TabBar/home/selectedMine.png'
+import home from './assets/images/home/home.png'
+import selectedHome from './assets/images/home/selectedHome.png'
+import mine from './assets/images/home/mine.png'
+import selectedMine from './assets/images/home/selectedMine.png'
 import Home from './pages/Home'
 import Mine from './pages/Mine'
 
@@ -18,11 +18,14 @@ function App() {
   // console.log(useParams())
   // console.log(useRouteMatch())
   const leftClick = () => {
-    console.log(1)
+    console.log('返回')
+  }
+  const rightClick = () => {
+    console.log('分享')
   }
   return (
     <div className="App">
-      <NavBar title="主题" leftText="返回" rightText="分享" leftClick={leftClick}></NavBar>
+      <NavBar title="主题" leftText="返回" rightText="分享" leftClick={leftClick} rightClick={rightClick}></NavBar>
       <div className="container">
         <Switch>
           <Route exact path="/index/home" component={Home} />

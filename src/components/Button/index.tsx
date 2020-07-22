@@ -21,15 +21,20 @@ export interface IButtonProps {
   disabled?: boolean;
 }
 
-const Button: React.FC<IButtonProps> = (props) => {
-  const {btnType, size, disabled, children, className} = props 
+type NativeButtonProps = IButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
+// type AnchorButtonProps = IButtonProps & React.AnchorHTMLAttributes<HTMLButtonElement>
+//export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
+export type ButtonProps = Partial<NativeButtonProps>
+
+const Button: React.FC<ButtonProps> = (props) => {
+  const {btnType, size, disabled, children, className, ...resetProps} = props 
   const name = classnames(className, 'btn', {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
     disabled: disabled
   })
   return (
-    <button className={name} disabled={disabled}>{children}</button>
+    <button className={name} disabled={disabled} {...resetProps}>{children}</button>
   )
 }
 

@@ -4,8 +4,8 @@ import Input from '../../components/Input'
 import useInput from '../../hooks/useInput'
 
 function Home() {
-  const [phone, phoneChange] = useInput('')
-  const [code, codeChange] = useInput('')
+  const [phone, phoneChange] = useInput()
+  const [code, codeChange] = useInput()
   return (
     <Fragment>
       <div style={{padding: '20px 0'}}>

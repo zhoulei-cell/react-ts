@@ -1,6 +1,7 @@
 
 .input-box{
-  padding: 0 px2rem(20);
+  margin-bottom: px2rem(10);
+  padding-right: px2rem(20);
   border: px2rem(1) solid #ccc;
   input.input{
     height: px2rem(88);
@@ -9,6 +10,7 @@
     border: none;
     font-size: px2rem(26);
     line-height: px2rem(88);
+    text-indent: px2rem(20);
   }
   span{
     height: px2rem(88);

@@ -22,7 +22,7 @@ export interface IButtonProps {
 }
 
 type NativeButtonProps = IButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
-// type AnchorButtonProps = IButtonProps & React.AnchorHTMLAttributes<HTMLButtonElement>
+//type AnchorButtonProps = IButtonProps & React.AnchorHTMLAttributes<HTMLAnchorElement>
 //export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 export type ButtonProps = Partial<NativeButtonProps>
 

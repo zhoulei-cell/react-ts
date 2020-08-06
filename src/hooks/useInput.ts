@@ -9,7 +9,7 @@ const useInput: (val?: string) => [string, Change] = (val?: string) => {
     setValue(e.target.value)
   }
 
-  return [value as string, change]
+  return [value, change]
 }
 
 export default useInput

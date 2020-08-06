@@ -22,11 +22,11 @@ const NavBar: React.FC<IProps> = (props) => {
     <div className="nav-bar-left d-flex ai-center" onClick={leftClick}>
       {leftIcon ? (<i className={leftIcon}></i>) : null}
       {leftImg ? (<img src={leftImg} alt=""/>) : null}
-      {leftText ? (<span>{leftText}</span>) : null}
+      {leftText ? (<span className="pd-left">{leftText}</span>) : null}
     </div>
     <div className="nav-bar-center">{title}</div>
     <div className="nav-bar-right d-flex jc-end ai-center" onClick={rightClick}>
-      {rightText ? (<span>{rightText}</span>) : null}
+      {rightText ? (<span className="pd-right">{rightText}</span>) : null}
       {rightImg ? (<img src={rightImg} alt=""/>) : null}
       {rightIcon ? (<i className={rightIcon}></i>) : null}
     </div>

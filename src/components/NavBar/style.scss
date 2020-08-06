@@ -1,14 +1,14 @@
 
 .nav-bar{
-  position: relative;
+  display: flex;
   &.border{
     border-bottom: 1px solid #ccc;
   }
   .nav-bar-left{
-    left: 0;
     padding-left: px2rem(20);
   }
   .nav-bar-center{
+    flex: 1;
     height: px2rem(88);
     padding: 0 px2rem(150);
     font-size: px2rem(32);
@@ -16,26 +16,28 @@
     line-height: px2rem(88);
   }
   .nav-bar-right{
-    right: 0;
     padding-right: px2rem(20);
   }
   .nav-bar-left,.nav-bar-right{
-    position: absolute;
-    top: 0;
     width: px2rem(130);
     height: px2rem(88);
     i{
-      font-size: px2rem(32);
-      line-height: px2rem(32);
-    }
-    span{
-      padding-left: px2rem(10);
       font-size: px2rem(28);
       line-height: px2rem(28);
     }
+    span{
+      &.pd-left{
+        padding-left: px2rem(5);
+      }
+      &.pd-right{
+        padding-right: px2rem(5);
+      }
+      font-size: px2rem(24);
+      line-height: px2rem(24);
+    }
     img{
-      width: px2rem(40);
-      height: px2rem(40);
+      width: px2rem(35);
+      height: px2rem(35);
     }
   }
 }

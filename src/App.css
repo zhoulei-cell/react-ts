@@ -1,5 +1,15 @@
+html,body,#root{
+  height: 100%;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-align: center;
+}
+.container{
+  flex: 1;
 }
 
 .App-logo {
@@ -35,4 +45,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.fade-left-enter{
+  transform: translate(100%);
+}
+.fade-left-enter-active{
+  position: absolute;
+  width: 100%;
+  transform: translate(0);
+  transition: all .3s;
+}
+
+.fade-left-exit{
+  transform: translate(0);
+}
+.fade-left-exit-active{
+  transform: translate(-100%);
+  transition: all .3s;
+}
+
+
+.fade-right-enter{
+  transform: translate(-100%);
+}
+.fade-right-enter-active{
+  position: absolute;
+  width: 100%;
+  transform: translate(0);
+  transition: all .3s;
+}
+
+.fade-right-exit{
+  transform: translate(0);
+}
+.fade-right-exit-active{
+  transform: translate(100%);
+  transition: all .3s;
 }

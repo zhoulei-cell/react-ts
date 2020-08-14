@@ -2,9 +2,20 @@ import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import './TabBarItem.scss'
 
+export interface IObj{
+  [index: string]: any
+}
+export interface ITo{
+  pathname: string;
+  search?: string;
+  hash?: string;
+  state?: IObj
+}
+
 export interface IProps{
   text?: string;
   path: string;
+  to: string | ITo;
   icon?: string;
   iconPath?: string;
   selectedIconPath?: string;
@@ -17,10 +28,10 @@ export interface IColorStyle{
 }
 
 const TabBarItem: React.FC<IProps> = (props) => {
-  const { text, path, icon, iconPath, selectedIconPath, color, selectedColor } = props
+  const { text, path, to, icon, iconPath, selectedIconPath, color, selectedColor } = props
   return (<Route path={path} exact children={(props) => {
     const style: IColorStyle = {color: props.match ? selectedColor : color}
-    return (<Link to={path} className="tab-bar-item flex-1 d-flex fd-column jc-center ai-center">
+    return (<Link to={to} className="tab-bar-item flex-1 d-flex fd-column jc-center ai-center">
       {iconPath ? <img className="icon-img" src={props.match ? selectedIconPath : iconPath} alt="icon"/> : null}
       {icon ? <i className={icon} style={style}></i> : null}
       {text ? <span className="text" style={style}>{text}</span> : null}

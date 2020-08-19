@@ -14,10 +14,16 @@ import back from './assets/images/nav/back.png'
 import share from './assets/images/nav/share.png' 
 import Home from './pages/Home'
 import Mine from './pages/Mine'
+import Search from './pages/Search'
+import storage from './utils/storage'
+
+import AuthRoute from './components/AuthRoute'
+
+storage.type("session")
 
 const defaultValue = {
   state: {
-    num: sessionStorage.getItem('route_num') || 0
+    num: storage.get('route_num') || 0
   },
   setState(val: any) {
     this.state = val
@@ -39,16 +45,13 @@ function App() {
   } 
   let name = 'fade-left'
   if (location.state) {
-    console.log(location.state, defaultValue)
     if (location.state.num < defaultValue.state.num) {
-      console.log('you')
       name = 'fade-right'
     } else {
-      console.log('zuo')
       name = 'fade-left'
     }
     defaultValue.setState(location.state)
-    sessionStorage.setItem('route_num', location.state.num)
+    storage.set('route_num', location.state.num)
   } 
   return (
     <div className="App">
@@ -64,6 +67,7 @@ function App() {
             <Switch location={location}>
               <Route exact path="/index/home" component={Home} />
               <Route exact path="/index/mine" component={Mine} />
+              <AuthRoute exact path="/index/search" component={Search} />
               <Redirect to="/index/home"/>
             </Switch>
           </CSSTransition>
@@ -71,7 +75,8 @@ function App() {
       </div>
       <TabBar>
         <TabBarItem path='/index/home' to={{pathname: '/index/home', state: {num: 0}}} iconPath={home} selectedIconPath={selectedHome} text="主页"></TabBarItem>
-        <TabBarItem path='/index/mine' to={{pathname: '/index/mine', state: {num: 1}}} iconPath={mine} selectedIconPath={selectedMine} text="我的"></TabBarItem>
+        <TabBarItem path='/index/search' to={{pathname: '/index/search', state: {num: 1}}} iconPath={mine} selectedIconPath={selectedMine} text="搜索"></TabBarItem>
+        <TabBarItem path='/index/mine' to={{pathname: '/index/mine', state: {num: 2}}} iconPath={mine} selectedIconPath={selectedMine} text="我的"></TabBarItem>
       </TabBar>
     </div>
   )
